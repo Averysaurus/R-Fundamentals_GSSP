@@ -1,29 +1,12 @@
 # R-Fundamentals - Script 3 of 4
 
-##### Challenge 1 - load data from files
+### 1. Load the gapminder-FiveYearData.csv file and save it in a variable named gap
 
-##### 1. Load the gapminder-FiveYearData.csv file and save it in a variable named gap
+### 2. Load the sleep_VIM.csv file and save it in a variable named sv
 
-##### 2. Load the sleep_VIM.csv file and save it in a variable named sv
+### 3. Load the heart.csv file and save it in a variable named heart
 
-##### 3. Load the heart.csv file and save it in a variable named heart
-
-# Section 1: save() and load()
-
-## You can save just the variables you want into a .RData file, and can load them later.
-## NOTE: run the solutions for Challenge 1 if you are stuck to ensure save() works properly
-save(gap, sv, heart, 
-     file = "data/fun_data.RData")
-
-##### Challenge 2 - loading .RData files
-
-##### 1. Wipe your global environment clean
-
-##### 2. Restart your R session by clicking "Session" --> "Restart R"
-
-##### 3. Load "fun_data.RData". If you don't know how to do this, how do you find out? 
-
-# Section 2: Data Summarization
+### Data Summarization #####
 
 ## Computing basic summary statistics is a good first step after you familiarize yourself with data
 
@@ -48,7 +31,7 @@ table(gap$continent, gap$year)
 ## or 
 table(gap$year, gap$continent) 
 
-## Section 3: Visualization
+##### Visualization #####
 
 ## Here we will talk about three of the most common data visualizations
 ## 1. Histogram: visualize the distribution of one continuous (i.e. numeric or integer) variable
@@ -64,20 +47,20 @@ colors()
 
 ## Histogram with options
 histogram <- hist(gap$lifeExp, 
-     col = "honeydew1",
-     # Add title
-     main = "Histogram of life expectancy", 
-     # Change x-axis label
-     xlab = "Life expectancy (years)",
-     # y-axis label
-     ylab = "Frequency",
-     # Change x-axis limits
-     xlim = c(20, 90),
-     # y-axis limits
-     ylim = c(0, 350), 
-     # Change tickmark value orientation
-     # Try values of 0, 1, 2, 3. What happens?
-     las = 1)
+                  col = "honeydew1",
+                  # Add title
+                  main = "Histogram of life expectancy", 
+                  # Change x-axis label
+                  xlab = "Life expectancy (years)",
+                  # y-axis label
+                  ylab = "Frequency",
+                  # Change x-axis limits
+                  xlim = c(20, 90),
+                  # y-axis limits
+                  ylim = c(0, 350), 
+                  # Change tickmark value orientation
+                  # Try values of 0, 1, 2, 3. What happens?
+                  las = 1)
 
 ## Boxplots
 ## Think of the tilde as meaning "by"
@@ -109,17 +92,17 @@ plot(x = gap$lifeExp, y = gap$gdpPercap,
 
 # This is a lot of code! How do we know which color and shape corresponds to each continent? We do not even have a legend yet! :(
 legend("topleft", 
-        inset = 0, 
-        title = "Continent", 
-        cex = 1,
-        c("Africa", 
+       inset = 0, 
+       title = "Continent", 
+       cex = 1,
+       c("Africa", 
          "Americas", 
          "Asia", 
          "Europe", 
          "Oceania"), 
-        col = c(1,2,3,4,5), 
-        pch = c(1,2,3,4,5),
-        horiz = FALSE)
+       col = c(1,2,3,4,5), 
+       pch = c(1,2,3,4,5),
+       horiz = FALSE)
 
 ## Too much code! Enter the ggplot2 way :)
 
@@ -208,112 +191,8 @@ gg_scatter <- ggplot(data = gap, aes(x = lifeExp, y = gdpPercap,
         legend.text = element_text(size = 5),
         # Rotate x-axis text 45 degrees
         axis.text.x = element_text(angle = 45, hjust = 1)) # + 
-  # scale_y_log10()
+# scale_y_log10()
 gg_scatter
 
-# Section 5: Creating Compound Figures
 
-## Compound figures are a nice way to combine multiple subplots into a single figure. 
 
-##### Challenge 3 - installing and librarying packages
-##### 1. Install and library the cowplot package
-
-##### 2. How do you know if it installed and libraried correctly? 
-
-##### Challenge 4 - create your own ggplot
-
-##### 1. Create a fourth ggplot figure of your choosing. Save it as a variable named gg_fourth
-
-## We can then use plot_grid to align our figures:
-?plot_grid
-compound_figure <- plot_grid(gg_hist, 
-                             gg_box, 
-                             gg_scatter, 
-                             gg_fourth,
-                             # labels = "auto",
-                             labels = c("A)", "B)", 
-                                        "C)", "D)"),
-                             rel_widths = 0.5,
-                             rel_heights = 0.5, 
-                             ncol = 2)
-compound_figure
-
-# Section 6: Statistical Testing
-
-## DISCLAIMER: Note that we are not teaching you statistics in this workshop. Instead, we are showing you how statistical programming works. All tests presented here have their own assumptions that you need to research before proceeding in your own research. Use D-Lab's consulting services if you have questions! 
-## Link to D-Lab consulting form: 
-## https://dlab.berkeley.edu/consulting
-
-## Now, we might want to test some of the assumptions elucidated by our data visualization(s). 
-
-## We can ask the research question: Is there a relationship between lifeExp and gdpPercap? 
-
-## 1. cor.test(): We could first use a correlation test to check for association between lifeExp and gdpPercap
-
-## 2. aov(): We could then use a one-way analysis of variance to look at differences in mean lifeExp by continent
-
-## 3. lm(): We could then fit a (linear) regression to see if gdpPercap can be used to predict lifeExp
-
-## 1. Linear correlation test gdpPercap and lifeExp
-?cor.test
-cor.test(x = gap$gdpPercap, 
-         y = gap$lifeExp, 
-         method = "pearson")
-
-## 2. aov for lifeExp by continent
-?aov
-aov_gap <- aov(gap$lifeExp ~ gap$continent)
-
-## Use summary() to access the useful information from our `aov_gap` model:
-summary(aov_gap)
-
-## TukeyHSD is a post-hoc test to look at pairwise differences:
-?TukeyHSD
-TukeyHSD(aov_gap)
-
-# or, aov for gdpPercap by continent
-aov_gap2 <- aov(gap$gdpPercap ~ gap$continent)
-summary(aov_gap2)
-TukeyHSD(aov_gap2)
-
-## Fit a linear model to see if gdpPercap can be used to predict lifeExp
-?lm
-gap_lm1 <- lm(lifeExp ~ gdpPercap, data = gap)
-summary(gap_lm1)
-
-## Plot the regression results
-names(gap_lm1)
-
-## View the intercept and slope
-gap_lm1$coefficients
-
-## Create the plot
-ggplot(gap, aes(x = gdpPercap, y = lifeExp)) + 
-  geom_point() + 
-  geom_smooth(method = "lm", lwd = 2, col = "red") + 
-  ggtitle("gdpPercap and lifeExp") + 
-  xlab("GDP per capita income (USD)") + 
-  ylab("Life expectancy (years)") + 
-  theme_bw() + 
-  theme(plot.title = element_text(hjust = 0.5, size = 40))
-
-## Log transformed x-axis
-options(scipen=999)
-ggplot(gap, aes(x = gdpPercap, y = lifeExp)) + 
-  geom_point() + 
-  geom_smooth(method = "lm", lwd = 2, col = "purple") + 
-  scale_x_log10() + 
-  ggtitle("log10 transformed gdpPercap and lifeExp") + 
-  xlab("log10 transformed GDP per capita income (USD)") + 
-  ylab("Life expectancy (years)") + 
-  theme_bw() + 
-  theme(plot.title = element_text(hjust = 0.5, size = 20))
-
-##### Challenge 5
-##### Complete the following tasks using the heart dataset:
-##### 1. Plot the distribution of chol
-
-##### 2. Visualize the differences in chol between females and males. 
-##### View this link to figure out the labels for females and males: https://archive.ics.uci.edu/ml/datasets/heart+disease
-
-##### 3. Perform a statistical test to see if there is a difference between female and male chol levels. 
