@@ -64,8 +64,6 @@ welcome # Error
 rm(list = ls()) 
 ls()
 
-##### Challenge 1 - variable assignment
-##### Define three variables and then write a mathematical expression using only those variables
 
 ##### Data Classes and Coercion #####
 
@@ -315,6 +313,6 @@ gdp
 ## View this location with getwd:
 getwd()
 
-##### Challenge - export to .csv
+##### Challenge - export to .csv #####
 ##### 1. Use ?write.csv to try and figure out how to export this data frame as a .csv file
 ##### 2. Use getwd() to see where it saved! Were you successful?
