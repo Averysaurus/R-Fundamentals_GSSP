@@ -1,6 +1,6 @@
 # R-Fundamentals - Script 1 of 4
 
-# Section 1: Navigating RStudio
+##### Navigating RStudio #####
 
 ## By default, this script will open in the upper left pane of RStudio. Open a new script by clicking File --> New File --> R Script
 
@@ -30,10 +30,6 @@ number
 
 ## Functions perform actions on things and usually are followed by trailing round parentheses
 ## Arguments are the 'things' - values, expressions, text, entire datasets, etc.
-
-## Use the ls() function to see all of the variables you have defined 
-## Notice that ls() does not take any arguments!
-ls()
 
 ## You can use the "TAB" key to autocomplete a variable
 ## Place your cursor after the 'b' in 'numb' below and press TAB
@@ -71,7 +67,7 @@ ls()
 ##### Challenge 1 - variable assignment
 ##### Define three variables and then write a mathematical expression using only those variables
 
-# Section 4: Data Classes and Coercion
+##### Data Classes and Coercion #####
 
 ## There are five main classes of data we will work with in this workshop:
 ## 1. numeric: decimals (the default for ALL numbers in R)
@@ -137,21 +133,8 @@ TRUE & FALSE
 TRUE | TRUE 
 TRUE | FALSE
 
-##### Challenge 2 - data type coercion
-##### Like as.integer, other "as dot" functions exist as well, such as as.numeric, as.character, as.logical, and as.factor.
-##### 1. Define three variables: one numeric, one character, and one logical
 
-##### 2a. Can you convert numeric to integer type?
-
-##### 2b. Convert numeric to logical?
-
-##### 2c. Convert numeric to character?
-
-##### 2d. Convert logical to character?
-
-##### 2e. Convert character to numeric?
-
-# Section 5 Data Structures
+##### Data Structures #####
 
 ## There are five main functions you can use to form more complex data structures:
 ## 1. paste: combine elements into character strings
@@ -163,14 +146,14 @@ TRUE | FALSE
 ## 1. Sentence formation
 ## Form sentences with paste: 
 pangram <- paste("The", 
-                "quick", 
-                "brown", 
-                "fox", 
-                "jumps", 
-                "over", 
-                "the", 
-                "lazy", 
-                paste0("dog", "."))
+                 "quick", 
+                 "brown", 
+                 "fox", 
+                 "jumps", 
+                 "over", 
+                 "the", 
+                 "lazy", 
+                 paste0("dog", "."))
 pangram
 
 ## The result will always be a string
@@ -199,15 +182,6 @@ cow_sentence
 ## NA is how R stores missing data
 num_vec <- c(2, 5, 8, NA, NA)
 num_vec
-
-# View the help page for the arithmetic mean function
-?mean
-
-mean(num_vec, na.rm = FALSE) # Does not work due to missing data
-
-mean(num_vec, na.rm = TRUE) # Works properly. 
-
-(2 + 5 + 8) / 3 # Do it manually! (sanity check)
 
 ## It does not matter what type the data is contained within the vector, 
 ## as long as it is all the same:
@@ -280,14 +254,8 @@ character <- sample(c("Canada", "USA", "Mexico"), 10, replace = TRUE)
 character
 class(character)
 
-##### Challenge 3 - concatenating vectors
-##### 1. Define a vector of length 20 using one of the above methods
 
-##### 2. Index the 3rd through 7th elements of this vector
-
-##### 3. Index the 3rd through 7th elements and the 14th element 
-
-## 3. Data frame
+##### Data frame #####
 ## A data frame is an ordered group of equal-length vectors
 ## Think of a data frame as a spread sheet you would open in MS Excel!
 ## Since they are vectors, each column can only contain the same data type, but columns of different types can be lined up next to each other!
@@ -304,7 +272,7 @@ set.seed(1)
 ## The equal-length vectors are the arguments
 ## the "stringsAsFactors = FALSE" argument means that R will keep character columns as character type and will NOT automatically convert them to factor/categorical type:
 gdp <- data.frame(character, uniform, normal, 
-                 stringsAsFactors = FALSE)
+                  stringsAsFactors = FALSE)
 gdp
 
 ## Check the compact structure of the gdp data frame
@@ -340,72 +308,13 @@ gdp$GDP
 gdp$calculation <- gdp$GDP * gdp$`Growth Rate`
 gdp
 
-##### Challenge 4 - make your own data frame
-##### 1. Create a data frame that contains four different food items and three attributes for each: name, price, and quantity
-##### 2. Add a fourth column that calculates the total cost for each food item
-##### 3. What function could you use to calculate the total cost of all the fruits combined? How do you find out?
-
-# Section 6: Factor Data
-
-## Remember above when we talked about factor is how R refers to categorical data?
-## stringsAsFactors = FALSE ensures that character columns will remain character type
-## Factor/categorical data can be important when you are performing calculations or making visualizations by group. This way, R knows that the character data should have grouping properties
-## "Levels" are the groups contained within the factor variable itself
-str(gdp) # "country" is character type. 
-
-## Convert "country" to factor type
-gdp$country <- factor(gdp$country) 
-
-str(gdp) # "country" is now factor type!
-gdp$country
-levels(gdp$country)
-
-## Changing Factor Levels
-gdp$country  # Levels: Canada, Mexico, USA (default alphabetical sort)
-
-## What if we want to change the factor level sort to Levels: Mexico, USA, Canada?
-gdp$country <- factor(gdp$country, levels = c("Mexico", "USA", "Canada"))
-gdp$country # The level order has changed. 
-
-# Section 7: Lists and Matrices
-
-## List
-## A list can be used to store heterogeneous data
-## Let's include three different data types: logical, character, and integer
-list1 <- list(TRUE, "one", 1) 
-list1
-class(list1)
-
-## Can't operate on lists :(
-list1 * list(FALSE, "zero", 0) # Error
-
-## Matrix
-## A matrix is like a vector in that it can only contain data of the same type, but it can be organized into rows and columns
-## It can also be higher order (i.e., it can have more dimensions that just rows and columns)
-matrix1 <- matrix(data = 1:12, nrow = 4, ncol = 3) 
-matrix1
-class(matrix1)
-
-## You can also coerce vector to matrix
-
-## Create a numeric vector from 1 to 20
-vec1 <- c(1:20)
-vec1
-class(vec1)
-
-## Coerce this vector to a matrix with 10 rows and 2 columns:
-matrix2 <- matrix(vec1, ncol = 2)
-matrix2
-class(matrix2)
-
-# Section 8: Exporting and Practice
-
+##### Exporting and Practice #####
+ 
 ## The working directory
 ## By default, your actions in RStudio are linked to a physical location on your computer called the "working directory"
 ## View this location with getwd:
 getwd()
 
-##### Challenge 5 - export to .csv
+##### Challenge - export to .csv
 ##### 1. Use ?write.csv to try and figure out how to export this data frame as a .csv file
 ##### 2. Use getwd() to see where it saved! Were you successful?
-
