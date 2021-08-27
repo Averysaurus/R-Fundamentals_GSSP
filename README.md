@@ -1,5 +1,5 @@
-# D-Lab R Fundamentals introductory workshop series  
-This is the repository for D-Lab's introductory R-Fundamentals workshop series. Laptop, Internet connection, and Zoom account required.
+# D-Lab R Fundamentals, Condensed Edition 
+This is the repository for D-Lab's introductory R-Fundamentals workshop series, condensed for two 90 minute lectures. 
 
 # Download and install R and RStudio
 
