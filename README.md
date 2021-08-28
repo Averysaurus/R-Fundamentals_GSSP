@@ -110,3 +110,4 @@ Don't know where to start researching classes? Look up some of these to see if t
 * Patty Frontiera  
 * Rochelle Terman  
 * Dillon Niederhut  
+* Avery Richards
