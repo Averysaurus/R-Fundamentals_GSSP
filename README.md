@@ -10,7 +10,7 @@ To install R to use locally on your own machine, follow these instructions:
 
 # Download workshop materials to get started
 
-To prepare ahead of time for attending this workhsop, download the [R-Fundamentals workshop materials](https://github.com/dlab-berkeley/R-Fundamentals).
+To prepare ahead of time for attending this workhsop, download the [R-Fundamentals GSSP workshop materials](https://github.com/Averysaurus/R-Fundamentals_GSSP).
 To run the lessons from the workshop materials on your laptop:
 
 1) Click the green “Code” button above (top-right) 
