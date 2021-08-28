@@ -14,7 +14,7 @@ To prepare ahead of time for attending this workhsop, download the [R-Fundamenta
 To run the lessons from the workshop materials on your laptop:
 
 1) Click the green “Code” button above (top-right) 
-2) Select “[Download ZIP](https://github.com/dlab-berkeley/R-Fundamentals/archive/refs/heads/master.zip)”  
+2) Select “[Download ZIP](https://github.com/Averysaurus/R-Fundamentals_GSSP.git)”  
 3) Find the downloaded .zip file and extract it to some place convenient (i.e., Desktop)
 4) Open these materials in R Studio from the location you extracted the files
 
