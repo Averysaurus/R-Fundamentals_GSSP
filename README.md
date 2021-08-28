@@ -18,7 +18,6 @@ To run the lessons from the workshop materials on your laptop:
 3) Find the downloaded .zip file and extract it to some place convenient (i.e., Desktop)
 4) Open these materials in R Studio from the location you extracted the files
 
-> (Optionally) If you are a Git user, simply clone this repository by opening a terminal and typing: `git clone git@github.com:dlab-berkeley/R-Fundamentals.git`
 
 # Is RStudio not working on your laptop? 
 
