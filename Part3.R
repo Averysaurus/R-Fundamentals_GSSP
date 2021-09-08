@@ -15,10 +15,8 @@
 summary(gap)
 
 ## We can also use this function on a single vector
-## Note that newer versions of R will convert to character automatically, not factor so summary will produce different results
 summary(gap$lifeExp)
-summary(as.factor(as.character(gap$continent)))
-summary(as.character(gap$continent)) # Strange output! 
+
 
 ## Contingency Tables
 ## We can also return return observation frequencies for the different continents
