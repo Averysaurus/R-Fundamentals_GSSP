@@ -4,6 +4,7 @@ Challenges have been removed, but there are a few places where students will be 
 The GSSP class hosts an interdisciplinary student body: some students may have experience in data analysis and coding, others not so much, or not at all. 
 Some key points are highlighted here in efforts to promote inclusion and removing barriers with all students of these condensed push-in sessions.
 
+
 Before the first session: 
 
 * Communicate with the GSI and forward this repository link to them. 
@@ -36,7 +37,8 @@ At the second session:
 
 * Begin with Part2.R 
 * Take time to revist the Rstudio IDE, which of the 4 windows are what and why.. 
-* Brace yourself for working directory problems, lol. No class is immune to working directory confusion!! It's okay to take time as a class on this, slow up the tempo, pause your lecture. Breakout into helping students 1-on-1 as needed. 
+* Brace yourself for working directory problems, lol. No class is immune to working directory confusion!! It's okay to take time as a class on this, slow up the tempo, pause your lecture. 
+* Breakout into helping students 1-on-1 as needed. 
 * If you're pushed against the clock, hurry through subsetting and focus on visualizations with the time left. 
 * Part4.R is just a little primer in markdown and YAML, okay to leave it as homework. 
 
