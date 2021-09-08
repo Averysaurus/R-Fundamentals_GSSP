@@ -1,4 +1,6 @@
-This condensed version of the Dlab's R-fundamentals is designed for teaching in two 1.5 hour sessions. Challenges have been removed, but there are a few places where students will be encouraged to interact by adding their own code to the material. The GSSP class hosts an interdisciplinary student body: some students may have experience in data analysis and coding, others not so much, or not at all. Some key points are highlighted here in efforts to promote inclusion and removal learning barriers with all students of these condensed push-in sessions.
+This condensed version of the Dlab's R-fundamentals is designed for teaching in two 1.5 hour sessions. 
+
+Challenges have been removed, but there are a few places where students will be encouraged to interact by adding their own code to the material. The GSSP class hosts an interdisciplinary student body: some students may have experience in data analysis and coding, others not so much, or not at all. Some key points are highlighted here in efforts to promote inclusion and removal learning barriers with all students of these condensed push-in sessions.
 
 Before the first session: 
 
