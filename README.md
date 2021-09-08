@@ -1,6 +1,8 @@
 # D-Lab R Fundamentals, Condensed GSSP Edition 
 This is the repository for D-Lab's introductory R-Fundamentals workshop series, condensed for two 90 minute lectures with the GSSP. 
 
+## Instructors: read these [instructor notes](https://github.com/Averysaurus/R-Fundamentals_GSSP/blob/master/instructor_notes.txt) to help prepare for the sessions!
+
 # Download and install R and RStudio
 
 To install R to use locally on your own machine, follow these instructions:
@@ -18,7 +20,6 @@ To run the lessons from the workshop materials on your laptop:
 3) Find the downloaded .zip file and extract it to some place convenient (i.e., Desktop)
 4) Open these materials in R Studio from the location you extracted the files
 
-## Instructors: read these [instructor notes](https://github.com/Averysaurus/R-Fundamentals_GSSP/blob/master/instructor_notes.txt) to help prepare for the sessions!
 
 # Is RStudio not working on your laptop? 
 
