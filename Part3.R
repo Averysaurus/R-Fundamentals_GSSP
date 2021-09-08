@@ -4,7 +4,7 @@
 
 ### 2. Load the sleep_VIM.csv file and save it in a variable named sv
 
-### 3. Load the heart.csv file and save it in a variable named heart
+
 
 ### Data Summarization #####
 
