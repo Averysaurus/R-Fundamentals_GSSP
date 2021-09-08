@@ -7,7 +7,8 @@ Before the first session:
 * Communicate with the GSI and forward this repository link to them. 
 * Ask GSI to share repo link with students, but emphasize students accessing the materials through github alone (downloading the repo folder via the green download button). 
 * Some students may have zero experience with github, and access to materials via anywhere else (bCourses, email, etc) can confuse when the code along begins. 
-* Draw attention to downloading R and R-studio (directions in the readme here). 
+* Instructions for github access are in this repo's readme file. 
+* Draw attention to downloading R and R-studio (directions, links in the readme as well). 
 * Ask that students have both downloaded at time of first session, or that instructions are disseminated to students aporiori. 
 
 
