@@ -1,5 +1,5 @@
 # D-Lab R Fundamentals, Condensed GSSP Edition 
-This is the repository for D-Lab's introductory R-Fundamentals workshop series, condensed for two 90 minute lectures. 
+This is the repository for D-Lab's introductory R-Fundamentals workshop series, condensed for two 90 minute lectures with the GSSP. 
 
 # Download and install R and RStudio
 
