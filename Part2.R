@@ -15,12 +15,12 @@
 ## We can read a dataset by passing in the file path as a character string
 ## This is the only required argument
 
-## Why doesn't this work? 
+## This work, why?!  
 gap <- read.csv("gapminder-FiveYearData.csv")
 
-## There is no such file in this directory! 
-## View the contents of your working directory with dir:
-dir()
+## Try this instead! Notice the difference between these ttwo calls?
+gap <- read.csv("data/gapminder-FiveYearData.csv")
+
 
 ## We need to go one level deeper into our file system (into the "data" folder)
 ## Therefore, we can simply add this to the file path, otherwise we could simply select the "data" folder when setting our working directory
@@ -48,6 +48,8 @@ str(gap)
 ## Note the filter buttons in the header row
 View(gap)
 
+## Challenge: load the sleep_VIM.csv data, click in between the quotation marks and use TAB to locate the .csv file in your directory.  
+sleep_VIM <- read.csv("")
 
 ## Wrap symbols in quotation marks to view their help pages
 ?"$" 
@@ -56,7 +58,9 @@ View(gap)
 sleep_VIM$Dream 
 
 ## You can also tab complete to see a list of columns. Helpful!
-sleep_VIM$ # press the TAB key here and select a column
+sleep_VIM$ # click just to the right of the $ and press the TAB key here to select a column
+
+
   
   ##### Subset a Data Frame in Two Dimensions #####
   
