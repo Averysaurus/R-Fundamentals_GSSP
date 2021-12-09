@@ -1,5 +1,5 @@
-# D-Lab R Fundamentals, Condensed GSSP Edition 
-This is the repository for D-Lab's introductory R-Fundamentals workshop series, condensed for two 90 minute lectures with the GSSP. 
+# D-Lab R Fundamentals Lite 
+This is the repository for D-Lab's introductory R-Fundamentals workshop series, condensed for two 90 minute lectures. 
 
 ## Instructors: read these [instructor notes](https://github.com/Averysaurus/R-Fundamentals_GSSP/blob/master/instructor_notes.txt) to help prepare for the sessions!
 
