@@ -23,7 +23,7 @@ To run the lessons from the workshop materials on your laptop:
 
 # Is RStudio not working on your laptop? 
 
-You can also access RStudio through your browser on UC Berkeley's DataHub by clicking [this link](https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fdlab-berkeley%2FR-Fundamentals&urlpath=rstudio%2F&branch=master). Datahub is a great option if you aren't able to install R and RStudio locally. CalNet ID credentials required. 
+You can also access RStudio through your browser on UC Berkeley's DataHub by clicking [this link](https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FAverysaurus%2FR-Fundamentals_Lite&urlpath=rstudio%2F). Datahub is a great option if you aren't able to install R and RStudio locally. CalNet ID credentials required. 
 
 # Workshop goals
 There are four code files in this repository that we will walk through. The following topics will be covered:
